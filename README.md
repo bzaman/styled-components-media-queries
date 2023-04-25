@@ -45,7 +45,6 @@ copy index.js and use it as you want.
   import styled from 'styled-components';
   import mediaQueries from './your-path';
 
-  // mediaQueries() // @media (min-width: 768px) 
   const Page = styled.div`
     width: 100%;
     margin-left: auto;
