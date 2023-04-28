@@ -38,7 +38,7 @@ copy index.js and use it as you want.
 
 ## How to use
 
-- example 01 without any argument
+- example without any argument
 - it will by default output with `@media (min-width: 768px)`
 
 ```javascript
@@ -52,9 +52,32 @@ copy index.js and use it as you want.
     padding-left: 16px;
     padding-right: 16px;
 
-    
     ${mediaQueries()} {
       max-width: 1440px;
+    }
+  `
+```
+
+- few other examples
+- `mediaQueries('max', 'md') // @media (max-width: 767.98px)` 
+- `mediaQueries('max', 471) // @media (max-width: 470.98px)`
+- `mediaQueries('max', 'lg') // @media (max-width: 991.98px)`
+- `mediaQueries('min', 'lg')  // @media (min-width: 992px)`
+- `mediaQueries('min', 804) // @media (min-width: 804px)`
+
+```javascript
+  const Card = styled.div`
+    max-width: 470px;
+    border-radius: 8px;
+    background-color: white;
+
+    ${mediaQueries('max', 'md')} {
+      max-width: calc(100% - 32px);
+      border-radius: 4px;
+    }
+
+    ${mediaQueries('max', 471)} {
+      background-color: yellow;
     }
   `
 ```
